@@ -22,6 +22,7 @@
     --f-headers: 'Arvo', serif;
 
     --nav-link-height: 2rem;
+    --scroll-spacing: calc(100vh / 4);
 }
 
 header {
@@ -103,33 +104,27 @@ header {
     border-radius: 20px;
 }
 
-.wrapper {    
-    min-height: 200vh;
+.wrapper {
     background: linear-gradient(white,white, #596682, #213154, #19254f, #101b40);
     z-index: -1;
     font-size: var(--fs-500);
 }
 
-.img {
+.bg-img {
     height: 100vh;
-    min-width: 100%;
     background-image: url(img/background5.png);
-    background-size:cover;
-    /* background-attachment: fixed; */
+    background-size: cover;
+    background-attachment: fixed;
     position: sticky;
-    top:0;    
-    z-index: 0;
+    top:0;
 }
 
-.scroll {    
-    top: 20vh;
-    position: absolute;
-    height: 180vh;
-    min-width: 100%;
+.scroll {
+    position: relative;
+    top: -70vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* align-items: center; */
+    gap: var(--scroll-spacing);
 }
 
 .main_header {
